@@ -1,0 +1,133 @@
+
+.settings
+  position: absolute
+  z-index: 10000
+  right: 6px
+  top: 58px
+  width: 260px
+  height: auto
+  background-color: rgba(255,255,255,0.95)
+  border-radius: 14px
+  padding: 7px 12px 11px
+  box-shadow: 0px 0px 3px 0 rgba(0,0,0,.3)
+  user-select: none
+  right: -105vw
+  transition: right 0.2s linear // transition: bottom 0.1s ease-in-out
+  font-size: 0
+  pointer-events: none
+  user-select: none
+  &:focus
+    outline-width: 0
+    // box-shadow: none
+  &:active
+    outline-width: 0
+    // box-shadow: none
+  &.on
+    right: 6px
+  & .close__btn
+    position: absolute
+    top: 5px
+    right: 4px
+  & .help__btn
+    position: absolute
+    top: 5px
+    right: 35px
+
+// используется для @extend
+.sett
+  display: inline-block
+  border-radius: 20px
+  margin: 1px 0
+
+.sett__sex-data
+  @extend .sett
+  background-color: cornsilk
+  pointer-events: none
+  user-select: none
+  & .sett__btn
+    font-size: 18px
+    padding: 4px 0
+
+.sett__age-data
+  @extend .sett
+  background-color: antiquewhite
+  pointer-events: none
+  user-select: none
+  & [data-age="an"]
+    font-size: 18px
+    padding: 4px 0
+
+.sett__filter_m
+  @extend .sett
+  background-color: bisque
+  pointer-events: none
+  user-select: none
+  & .sett__btn.off
+    font-size: 18px
+    padding: 4px 0
+
+.sett__filter_f
+  @extend .sett
+  background-color: peachpuff
+  pointer-events: none
+  user-select: none
+  & .sett__btn.off
+    font-size: 18px
+    padding: 4px 0
+
+.sett__btn
+  @extend .text__btn
+  @extend .btn_small
+  @include font_family('bold')
+  display: inline-block
+  margin: 2px 3px
+  text-align: center
+  vertical-align: bottom
+  font-size: 14px
+  padding: 6px 0 3px
+  pointer-events: auto
+  user-select: none
+  & small
+    pointer-events: none
+    user-select: none
+  & sup
+    pointer-events: none
+    user-select: none
+  & sub
+    pointer-events: none
+    user-select: none
+  &:first-child
+    margin: 2px 3px 2px 0
+  &:last-child
+    margin: 2px 0 2px 3px
+  &.off
+    cursor: default
+  &.off:hover // кнопки фильтра М и Ж
+    box-shadow: none
+  &.off:active // кнопки фильтра М и Ж
+    background-position-y: 0
+
+.sett__caption
+  // @include font_family('bold')
+  font-size: 15px
+  margin: 8px 0 4px
+  pointer-events: none
+  user-select: none
+
+
+.sett__filter-lock
+  display: none
+  position: absolute
+  z-index: 10001
+  bottom: 0
+  left: 0
+  width: 280px
+  height: 100px
+  background-color: rgba(255,255,255,.5)
+  border-radius: 8px
+  &.on
+    display: block
+
+.sett__form
+  pointer-events: none
+  user-select: none

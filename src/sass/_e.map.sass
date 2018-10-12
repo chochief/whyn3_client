@@ -1,0 +1,28 @@
+
+$window_width: 100vw
+$window_height: 100vh
+
+.map-container 
+    width: $window_width
+    height: $window_height
+    // background-color: $grey-light
+    overflow: hidden
+    position: relative
+    margin: 0 auto
+    font-size: 0
+
+.map 
+    position: absolute
+    // transition: transform 0.3s linear
+
+.glob
+    position: absolute
+    z-index: 10
+    width: $window_width
+    // height: 105vh //$window_height
+    // bottom: -5vh
+    background-color: #fff
+    right: -105vw
+    transition: right 0.2s linear
+    &.shown
+        right: 0

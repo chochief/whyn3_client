@@ -1,0 +1,18 @@
+name: WhynClient
+version: 1.0.0
+
+dependencies:
+  crypto: "^2.0.2+1"
+
+transformers:
+- $dart2js:
+    # analyzeAll: true
+    # checked: true
+    # csp: true
+    # environment: {name: value, ...}
+    minify: true
+    sourceMaps: false
+    # suppressHints: true
+    # suppressWarnings: true
+    # terse: true
+    # verbose: true

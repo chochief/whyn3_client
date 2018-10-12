@@ -1,0 +1,126 @@
+
+// FONT MIXINS
+
+@mixin bold () 
+    // font-family: 'sf_ui_displaylight', sans-serif
+    // font-weight: bold
+
+
+@mixin semibold () 
+    // font-family: 'sf_ui_displaysemibold', sans-serif
+    // font-weight: normal
+
+
+@mixin normal () 
+    // font-family: 'sf_ui_displayregular', sans-serif
+    // font-weight: normal
+
+
+@mixin light () 
+    // font-family: 'sf_ui_displaylight', sans-serif
+    // font-weight: normal
+
+
+@mixin font_family ($style : regular) 
+    @if $style == light 
+        font-family: "podkovaregular", sans-serif
+        font-weight: 400
+    
+    @if $style == regular 
+        font-family: "podkovaextrabold", sans-serif
+        // font-weight: 700
+    
+    @if $style == bold 
+        font-family: "podkovaextrabold", sans-serif
+        // font-weight: 700
+    
+    @if $style == luckiest 
+        font-family: "luckiest", sans-serif
+        // font-weight: 700
+    
+
+
+@mixin selection ($color, $bg-color) 
+    &::selection  
+        background: $bg-color 
+        color: $color 
+    &::-moz-selection  
+        background: $bg-color 
+        color: $color 
+    &::-webkit-selection  
+        background: $bg-color 
+        color: $color 
+
+
+/// STYLES
+
+@mixin span()
+    display: inline
+    // margin: 0 2px
+
+@mixin header()
+    @include font_family('bold')
+    font-size: 21px
+    line-height: 1.4
+    @include span()
+
+@mixin lead()
+    font-size: 16px
+    @include span()
+
+@mixin text()
+    font-size: 14px
+    @include span()
+
+@mixin number()
+    @include font_family('luckiest')
+    font-size: 16px
+    @include span()
+    vertical-align: -1px
+    padding: 0 4px
+
+.header
+    @include header()
+
+.lead
+    @include lead()
+
+.text
+    @include text()
+
+.number
+    @include number()
+
+.section
+    margin-bottom: 5px
+    &:last-child
+        margin-bottom: 0
+    &.section_center
+        text-align: center
+
+.list
+    margin-bottom: 4px
+
+.line
+    margin: 9px 0 0 0
+    height: 9px
+    border-top: 1px dashed #cccccc
+
+.button
+    @include header()
+    font-size: 16px
+    margin: 4px 6px 3px 0
+    text-transform: uppercase
+    cursor: pointer
+    &:active
+        // box-shadow: 0px 0px 4px 0px $orange
+        text-shadow: 0px 0px 1px #cccccc
+    &.btn_off,
+    &.btn_off:active
+        @include lead()
+        font-size: 14px
+        color: #777
+        cursor: default
+        text-shadow: none
+    &.warn_btn
+        color: $red

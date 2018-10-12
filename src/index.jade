@@ -1,0 +1,20 @@
+doctype html
+- var meta_title = ["Hey, what's your name?", "Hey, what's your name?"]
+html(lang="#{lang}")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0")
+        meta(http-equiv="X-UA-Compatible" content="IE=edge,chrome=1")
+        title #{meta_title[l]}
+        include jade/favicon
+        link(rel="stylesheet" text="text/css" href="css/style.css")
+    body
+        .logo__container(id="logo_container")
+            .logo__image
+        include jade/loading
+        .browser.hidden(id="browser")
+            include jade/help
+            include jade/settings
+            include jade/btns
+            include jade/map
+        script(src="js/bundle.js")

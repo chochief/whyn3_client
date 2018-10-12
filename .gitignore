@@ -1,0 +1,9 @@
+# .gitignore
+
+.pub
+.packages
+pubspec.lock
+
+.vscode
+node_modules
+/.packages

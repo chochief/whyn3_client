@@ -1,0 +1,26 @@
+
+.loading 
+  position: absolute
+  top: 0
+  bottom: 0
+  left: 0
+  right: 0
+  z-index: 99
+  text-align: center
+  background-color: rgba(255,255,255,.9)
+
+
+.loading__text 
+  // выравнивание по вертикали
+  z-index: 10
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%) 
+  margin: 0
+  width: 89%
+  // -------------------------
+  @include font_family('bold')
+  font-size: 18px
+  line-height: 1.2
+  // padding: 0 18px

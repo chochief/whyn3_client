@@ -1,0 +1,31 @@
+$dialog_width: 260px;
+$side_pad: 6px
+
+@mixin dialog()
+    position: absolute
+    z-index: 10000
+    top: $side_pad // override it
+    width: $dialog_width
+    height: auto
+    background-color: rgba(255,255,255,0.95)
+    border-radius: 14px
+    padding: 7px 12px 11px
+    box-shadow: 0px 0px 3px 0 rgba(0,0,0,.3)
+    user-select: none
+    font-size: 0
+    right: -105vw
+    transition: right 0.2s linear
+    &.on
+        right: $side_pad
+    // &::before
+    //     border: 10px solid transparent
+    //     border-bottom-color: rgba(255,255,255,0.85)
+    //     position: absolute
+    //     z-index: -1
+    //     top: -20px
+    //     right: 6px
+    //     content: ""
+    & .close__btn
+        position: absolute
+        top: 5px
+        right: 4px

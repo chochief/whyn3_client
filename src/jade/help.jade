@@ -1,0 +1,37 @@
+.help(id="help_dlg")
+    .help__about
+        .section
+            .header Короткие знакомства
+        .section
+            .text Идея в том, чтобы тратить совсем немного времени, и тогда можно знакомиться с кем угодно!
+        .list
+            .number 0.
+            .text Найдитесь посредством карты!
+        .list
+            .number 1.
+            .text Скажите: what's your name!
+        .list
+            .number 2.
+            .text Узнайте имя и отчество!
+        .list
+            .number 3.
+            .text Выложите три факта о себе!
+        .list
+            .number 4.
+            .text И выслушайте три факта в ответ!
+        .list
+            .number 5.
+            .text Оставьте телефон в истории звонков!
+    .line
+    .help__online
+        .section
+            .text Требуется GPS:
+        .section.section_center
+            .button(id="online_btn") включить 
+            .button(id="offline_btn") выключить
+    .line
+    .help__stats
+        .section
+            .text Сейчас в сети:
+            .number(id="online_stats") ... 
+            .text(id="stats_btn") обновить
